@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+      }
+      .main {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 0, 0, 0.5);
+      }
+      .blog-header {
+        height: 64px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        background-color: bisque;
+
+        font-weight: bold;
+        font-size: 1.5rem; /*15px*/
+
+        padding-left: 20px;
+      }
+      #photos {
+        width: 100%;
+        height: calc(100% - 64px);
+        background-color: blueviolet;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="blog-header">My Photography Blog</div>
+      <div id="photos">Photos</div>
+    </div>
+  </body>
+</html>

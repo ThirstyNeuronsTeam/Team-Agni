@@ -1,0 +1,11 @@
+Background with gradient color (div)
+    Background -Wrapper - Center (div)
+        Background (division) (div)
+            Image (Dynamic) (img/div)
+            Prev (Dynamic/Interactive) (button)
+            Pause/Play (Dynamic/Interactive) (button)
+            Next (Dynamic/Interactive) (button)
+        Background(Dynamic) (div)
+            Name (span)
+            Duration(Dynamic/Interactive) (progress)
+               
