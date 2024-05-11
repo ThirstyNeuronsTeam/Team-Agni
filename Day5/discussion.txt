@@ -1,0 +1,38 @@
+SOLID
+
+S-  Single Responsilibility - Unit Testing 
+O - Open for Extension and Closed for Modifiation
+L - Liskov Substitution 
+I - Interface Segreation
+D - Dependency Injection
+
+
+Primitive Types
+Boolean - True or False
+Number - 
+String
+
+Complex Types - Referece Types - Non Primitive Types
+Address - Combination of Number ,String,Booleab (Object)
+Collection of Students - Collection of Objects - Array
+
+Date 
+
+
+BigInt
+Symbol
+
+Variable Types - const and let
+
+const - you cannot change it again , but internal data can be changed
+let - you can change it in anyway
+
+normal variable naming convention - camelcase
+state variable - UPPERCASE with KEBAB
+
+SCRIPT
+
+    ADD script below the last element of the body
+    ADD SCript inside the head with defer attribute
+    ADD SCript inside the head and call the initialization function on body onload
+
