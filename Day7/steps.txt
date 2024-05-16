@@ -1,0 +1,7 @@
+1) Get the Design(XD file or Figma File) from Designer
+2) List all the UI elements in tree format - try to find similar UI elements/Components
+3) List out required data
+4) List out all user interactions with the elements - click , keyboard , mousemove , drag 
+      - you may find more data
+5) On which interaction, what data will change and find out proper logic for data manipulation
+6) whenever Data changes , render the UI
