@@ -12,3 +12,9 @@ array of songs - to handle song list
 number - to store the current song
 
 SOLID 
+
+FLAMES
+
+Ajith
+Shalini
+
