@@ -57,8 +57,13 @@ function findLettersCount(fN, sN) {
   return letterCount;
 }
 
-const letterCount = findLettersCount("Ajith", "Shalini");
-
+function getLetters(letter,len=1000000)
+{
+  return Array.from({length: len}, (_, i) => letter).join("")
+}
+console.time()
+const letterCount = findLettersCount(getLetters("z"), getLetters("a"));
+console.timeEnd()
 
 console.log(letterCount===6)
 
