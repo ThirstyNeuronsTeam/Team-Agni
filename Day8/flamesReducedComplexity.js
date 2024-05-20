@@ -22,14 +22,14 @@ function findLettersCount(fN, sN) {
   //console.log(counterF)
   //console.log(counterS)
 
-  const keys = Object.keys(counterF);
+  const firstNameKeys = Object.keys(counterF);
   console.log("printing the keys");
   console.log(counterF);
-  console.log(keys);
+  console.log(firstNameKeys);
 
   let totalUncommonCharacters = fN.length + sN.length;
 
-  keys.forEach((key) => {
+  firstNameKeys.forEach((key) => {
     const ifSameKeyPresentInSecondName = counterS[key]
     if (ifSameKeyPresentInSecondName) {
       const commonLetterCount = Math.min(counterF[key], counterS[key])
