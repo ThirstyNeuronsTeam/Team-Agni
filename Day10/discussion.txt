@@ -1,0 +1,12 @@
+in production 
+
+we should minify our code
+
+Vite 
+
+Vite will minify the project
+difficult to debug
+
+There is way to ship your actual code along with minified code. 
+
+SOURCE_MAP : true
