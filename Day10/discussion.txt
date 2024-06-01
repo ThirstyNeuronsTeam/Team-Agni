@@ -10,3 +10,7 @@ difficult to debug
 There is way to ship your actual code along with minified code. 
 
 SOURCE_MAP : true
+
+Webpack 
+
+Typescript as well
