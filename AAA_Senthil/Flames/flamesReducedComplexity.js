@@ -1,0 +1,53 @@
+function convertToLetters(name) {
+  const firstNameLetters = name.split("");
+  return firstNameLetters;
+}
+
+function convertToCounterObject(name) {
+  const letters = convertToLetters(name);
+  const counter = {};
+  //counter = {"a":1,"j":1}
+  letters.forEach((letter) => {
+    counter[letter] = (counter[letter] || 0) + 1;
+  });
+  return counter;
+}
+
+function findLettersCount(fN, sN) {
+  //converting Ajith to object
+  const counterF = convertToCounterObject(fN.toLowerCase());
+  console.log(counterF)
+  //converting halini to Object
+  const counterS = convertToCounterObject(sN.toLowerCase());
+  console.log(counterS)
+
+  //console.log(counterF)
+  //console.log(counterS)
+
+  const firstNameKeys = Object.keys(counterF);
+  console.log("printing the keys");
+  console.log(counterF);
+  console.log(firstNameKeys);
+
+  let totalUncommonCharacters = fN.length + sN.length;
+
+  firstNameKeys.forEach((key) => {
+    const ifSameKeyPresentInSecondName = counterS[key]
+    if (ifSameKeyPresentInSecondName) {
+      const commonLetterCount = Math.min(counterF[key], counterS[key])
+      totalUncommonCharacters =  totalUncommonCharacters - 2 * commonLetterCount;
+    }
+  });
+
+  return totalUncommonCharacters;
+}
+
+function getLetters(letter, len = 1000000) {
+  const array = Array.from({ length: len }, () => letter);
+  return array.join("");
+}
+
+console.time();
+const letterCount = findLettersCount(getLetters("z"), getLetters("a"));
+console.timeEnd();
+console.log(letterCount);

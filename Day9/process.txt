@@ -1,0 +1,26 @@
+Application
+  Title
+  Information
+    -Balance
+       - title , value
+    -Income
+       - title , value
+    -Expense
+       - title , value
+  List of Transactions
+     - Transaction 
+         reason , amount , delete button(interactive) , color code
+  Add Transaction form
+     - Input - reason(interactive)
+     - Input - amount(interactive)
+     - Submit Button(interactive)
+
+
+
+//array to store Transactions
+balance = 1000
+income = 3000
+expense = 2000
+
+reasonFormField = "cinema"
+amountFormField = 500

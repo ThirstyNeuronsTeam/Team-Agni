@@ -16,8 +16,10 @@ function convertToCounterObject(name) {
 function findLettersCount(fN, sN) {
   //converting Ajith to object
   const counterF = convertToCounterObject(fN.toLowerCase());
+  console.log(counterF)
   //converting halini to Object
   const counterS = convertToCounterObject(sN.toLowerCase());
+  console.log(counterS)
 
   //console.log(counterF)
   //console.log(counterS)
@@ -46,6 +48,6 @@ function getLetters(letter, len = 1000000) {
 }
 
 console.time();
-const letterCount = findLettersCount("Aaajjith", "Shalini");
+const letterCount = findLettersCount(getLetters("z"), getLetters("a"));
 console.timeEnd();
 console.log(letterCount);

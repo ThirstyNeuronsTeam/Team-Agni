@@ -1,0 +1,8 @@
+function
+const
+[string]split
+return
+[array]forEach
+[Object]keys
+(array)length
+[Array]from
