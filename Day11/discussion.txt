@@ -1,0 +1,6 @@
+Form Submit
+
+  Declarative
+  Imperative
+     - Event Based (addEventListener) (I can trigger multiple functions)
+     - Callback Based ( formElement.onsubmit = addTransaction)

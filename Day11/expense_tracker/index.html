@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="./addFormEvent.js" defer></script>
+
+    <script>
+      const transactions = [];
+
+      let balance = 0;
+
+      let income = 0;
+      let expense = 0;
+
+      let reason = "";
+      let amount = 0;
+
+      const transactionDelete = (transactionId) => {};
+
+      const renderTransaction = (newTransaction) => {
+
+        console.log(newTransaction);
+
+        const transactionsDiv = document.getElementById("transactionsDiv");
+
+        const singleTransactionWrapperDiv = document.createElement("div");
+        singleTransactionWrapperDiv.className= "TransactionWrapper"
+
+        const singleTransactioninnerHtml = `
+          <button>Delete</button>
+          <div class="TransactionDetails">
+             <span>${newTransaction.reason}</span>
+             <span>${newTransaction.amount}</span>
+          </div>
+          <div style="width:5px;height:100%x;background-color:${newTransaction.amount<0?"red":"green"}"">
+          </div>
+        `
+
+        singleTransactionWrapperDiv.innerHTML = singleTransactioninnerHtml
+        
+
+        /*const reasonDiv = document.createElement("span");
+        reasonDiv.textContent = newTransaction.reason;
+
+        const amountDiv = document.createElement("span");
+        amountDiv.textContent = newTransaction.amount;
+
+        const indicator = document.createElement("div");
+        indicator.style = newTransaction.amount<0 ? "width:10px;height:10px;background-color:red":"width:10px;height:10px;background-color:green"
+
+
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        singleTransactionWrapperDiv.append(deleteButton);
+        singleTransactionWrapperDiv.append(reasonDiv);
+        singleTransactionWrapperDiv.append(amountDiv);
+        singleTransactionWrapperDiv.append(indicator);*/
+
+        transactionsDiv.appendChild(singleTransactionWrapperDiv);
+
+      };
+
+      const addTransaction = (reason, amount) => {
+        const newTransaction = {
+          id: Math.random(),
+          reason: reason,
+          amount: amount,
+        };
+        transactions.push(newTransaction);
+
+        renderTransaction(newTransaction);
+
+      };
+
+      const submitTransaction = (event) => {
+        event.preventDefault();
+        const formElement = event.target;
+        const reason = formElement[0].value;
+        const amount = formElement[1].value;
+
+        formElement.reset()
+
+  
+
+        addTransaction(reason,amount);
+      };
+
+      const onReasonChange = (event) => {
+        /*const value = event.target.value
+        console.log(value)
+        if(!!value && value.length>=5){
+          event.target.value = value.substring(0,5) //0,1,2,3,4
+        }*/
+      };
+
+      const onAmountChange = (event) => {
+        //console.log(event.target.value);
+      };
+    </script>
+  </head>
+  <body style="width: 100vw;height:100vh; display:flex; justify-content:center;align-items:center;">
+   
+    <div class="Application">
+      <div class="Title" id="title">Expense Tracker</div>
+      <div class="Information"  id="information">
+        <div id="balance">Balance</div>
+        <div id="income">Income</div>
+        <div id="expense">Expense</div>
+      </div>
+
+      <div class="Transactions" id="transactionsDiv">
+
+      </div>
+
+      <form
+        class="TransactionForm"
+        id="transactionForm"
+      >
+        <div class="InputWrapper">
+          <label for="reason">Reason</label>
+          <input
+            placeholder="Enter Reason"
+            id="reason"
+            oninput="onReasonChange(event)"
+          />
+        </div>
+        <div class="InputWrapper">
+          <label for="amount">Amount</label>
+          <input
+            placeholder="Enter Amount"
+            id="amount"
+            type="number"
+            oninput="onAmountChange(event)"
+          />
+        </div>
+        <button type="submit">Add Transaction</button>
+      </form>
+    </div>
+  </body>
+</html>
