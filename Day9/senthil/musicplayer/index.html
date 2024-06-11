@@ -44,6 +44,26 @@
 
                  </div> -->
       </div>
+      <div
+        class="center_of_the_app"
+        style="background-color: white; width: 50%; height: 30%"
+      >
+        <img src="./images/hey.jpg" id="coverPhoto" />
+        <span id="songIndex">0</span>
+        <audio  id="musicAudio"></audio>
+        <div class="music_player_controls" id="music_player_controls">
+          <!-- prevButton.addEventListener("click",doSometingOnPrevClick) -->
+          <button id="prev" onclick="prevSong()">Prev Song</button>
+          <div id="controls">
+            <button id="play" onclick="playSong()">Play</button>
+            <button id="pause" onclick="pauseSong()">Pause</button>
+          </div>
+          <button onclick="nextSong()">Next Song</button>
+        </div>
+        <!--<div class="song_details">
+
+                 </div> -->
+      </div>
     </div>
   </body>
 </html>
