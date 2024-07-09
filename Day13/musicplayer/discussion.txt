@@ -1,0 +1,3 @@
+moved everything inside a function from Global Scope
+Added Id as the argument
+changed getElementById to querySelector
